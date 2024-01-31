@@ -103,7 +103,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   }
 
   Widget _buildAddons() {
-    List<String> addons = ['Addon 1', 'Addon 2', 'Addon 3']; // Substitua com seus addons reais
+    List<String> addons = ['Leite Condensado', 'Granola', 'Gotas de Chocolate', 'Paçoca', 'Leite Ninho']; // Substitua com seus addons reais
 
     return Column(
       children: addons.map((addon) {
