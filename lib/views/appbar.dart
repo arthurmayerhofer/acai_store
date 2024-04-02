@@ -3,6 +3,8 @@ import 'package:acai_store/views/menu.dart';
 import 'package:acai_store/views/profile_page.dart';
 import 'package:flutter/material.dart';
 
+import 'cart_page.dart';
+
 class OverflowingLogoAppBar extends StatelessWidget
     implements PreferredSizeWidget {
   final String title;
@@ -81,7 +83,6 @@ class _BottomNavigationMenuState extends State<BottomNavigationMenu> {
       currentIndex: widget.currentIndex,
       selectedItemColor: Colors.deepPurpleAccent,
       unselectedItemColor: Colors.black,
-
       onTap: _navigateToSelectedTab,
     );
   }
@@ -114,7 +115,10 @@ class _BottomNavigationMenuState extends State<BottomNavigationMenu> {
         break;
       case 1:
         // Navegar para o Carrinho
-        // Implemente a navegação para a página do carrinho aqui, se necessário
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CartPage()),
+        );
         break;
       case 3:
         // Navegar para a Página de Perfil
